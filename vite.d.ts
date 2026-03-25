@@ -1,7 +1,7 @@
 import type { Plugin } from "vite";
 
 /**
- * Options for {@link zynora}. All fields are optional; defaults use this package’s `icons/` merged with optional `input`, output `public/zynora`.
+ * Options for {@link zynora}. All fields are optional; defaults use this package’s `icons/` merged with optional `input`, output `node_modules/.cache/zynora`.
  */
 export type ZynoraPluginOptions = {
     /**
@@ -16,8 +16,8 @@ export type ZynoraPluginOptions = {
     input?: string;
 
     /**
-     * Output directory for generated fonts and CSS. Defaults to `public/zynora` (relative to Vite `root`).
-     * In `vite build`, `import "zynora/css"` resolves to the generated `.css` file here so font `url(./…)` resolve on disk.
+     * Output directory for generated fonts and CSS. Defaults to `node_modules/.cache/zynora` (relative to Vite `root`).
+     * In dev, `import "zynora/css"` is a virtual stylesheet; fonts load from `/@zynora/*`. In `vite build`, the import resolves to the on-disk `.css` here so font `url(./…)` resolve.
      */
     output?: string;
 
