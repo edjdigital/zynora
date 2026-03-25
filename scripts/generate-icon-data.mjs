@@ -24,7 +24,7 @@ function formatCodepointLabel(cp) {
 }
 
 /**
- * Lowercase hex glyph id (Font Awesome–style, e.g. `e43a`).
+ * Lowercase hex glyph id (Font Awesome-style, e.g. `e43a`).
  *
  * @param {number} cp - Code point.
  * @returns {string}

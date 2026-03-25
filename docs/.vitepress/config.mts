@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
     title: "Zynora",
-    description: "Folder-based icon font for the web — Vite plugin, SVG/PNG sources, Font Awesome–style classes.",
+    description: "Complete icon toolkit with SVG, font, and CSS support, built for modern design systems and developer workflows.",
     lang: "en-US",
     // VitePress uses `git` for timestamps; Docker/Dokploy often has no git binary or no `.git` in context.
     lastUpdated: process.env.ZYNORA_DOCS_NO_GIT === "1" ? false : true,
@@ -49,8 +49,8 @@ export default defineConfig({
         },
 
         footer: {
-            message: "Zynora icon set",
-            copyright: "Private / UNLICENSED — replace brand marks with assets you may distribute."
+            message: "Icon font toolkit by the Even7 team",
+            copyright: "MIT - replace brand marks with assets you may distribute."
         },
 
         outline: {

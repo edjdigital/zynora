@@ -1,6 +1,6 @@
 ---
 title: Icon gallery
-description: Search Zynora icons, open a Font Awesome–style detail panel, and copy HTML or the Unicode glyph.
+description: Search Zynora icons, open a Font Awesome-style detail panel, and copy HTML or the Unicode glyph.
 outline: false
 ---
 

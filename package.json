@@ -1,8 +1,8 @@
 {
     "name": "zynora",
     "version": "1.0.0",
-    "description": "Zynora icon set (folder-based SVG/PNG) with Vite integration and auto-generated docs.",
-    "license": "UNLICENSED",
+    "description": "Icon font toolkit by the Even7 team - folder-based SVG/PNG, Vite integration, and auto-generated docs.",
+    "license": "MIT",
     "private": true,
     "type": "module",
     "files": [

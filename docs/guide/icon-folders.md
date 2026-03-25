@@ -8,7 +8,7 @@ icons/
     .zynora.yaml          # optional style config
     star/
       icon.svg            # required (or icon.png)
-      doc.md              # optional — only `trademark` is read today
+      doc.md              # optional - only `trademark` is read today
   brands/
     .zynora.yaml
     picpay/
@@ -16,8 +16,8 @@ icons/
       doc.md
 ```
 
-- **`{style}`** — Groups glyphs (like Font Awesome “solid” vs “brands”). Used in paths and filters in the gallery.
-- **`{slug}`** — Folder name; shown in the gallery and detail header (lowercase, like Font Awesome). It also drives the CSS class with the style’s `classPrefix` (e.g. `zys-star`, `zyb-picpay`).
+- **`{style}`** - Groups glyphs (like Font Awesome “solid” vs “brands”). Used in paths and filters in the gallery.
+- **`{slug}`** - Folder name; shown in the gallery and detail header (lowercase, like Font Awesome). It also drives the CSS class with the style’s `classPrefix` (e.g. `zys-star`, `zyb-picpay`).
 
 ## Style config: `.zynora.yaml`
 
@@ -41,9 +41,9 @@ The gallery **does not** use `title`, `summary`, `description`, `tags`, or the m
 
 | Field | Description |
 | --- | --- |
-| `trademark` | `true` or `false`. If omitted, **`icons/brands/...` defaults to `true`** (Font Awesome–style “may be protected as a trademark” banner). **`icons/solid/...` defaults to `false`**. |
+| `trademark` | `true` or `false`. If omitted, **`icons/brands/...` defaults to `true`** (Font Awesome-style “may be protected as a trademark” banner). **`icons/solid/...` defaults to `false`**. |
 
-Example — force the notice on a non-brand glyph:
+Example - force the notice on a non-brand glyph:
 
 ```yaml
 ---
@@ -51,7 +51,7 @@ trademark: true
 ---
 ```
 
-Example — hide the notice for a specific brand folder (only if you are sure it is appropriate):
+Example - hide the notice for a specific brand folder (only if you are sure it is appropriate):
 
 ```yaml
 ---

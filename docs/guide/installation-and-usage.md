@@ -19,7 +19,7 @@ export default defineConfig({
 
 | Setting | Default |
 | --- | --- |
-| Package icons | `packageIcons: true` — built-in `icons/` from **zynora** |
+| Package icons | `packageIcons: true` - built-in `icons/` from **zynora** |
 | App icons | Optional `input`; merged on top of package icons when both are set |
 | Output | `public/zynora` (relative to Vite `root`) |
 | `fontsUrl` in CSS | Inferred (e.g. `/zynora/`) when `output` lies under Vite’s `publicDir` |
@@ -38,7 +38,7 @@ zynora({
 })
 ```
 
-3. **Import the virtual stylesheet** once in your app entry (Vite processes it like normal CSS — minify, `?inline`, etc.):
+3. **Import the virtual stylesheet** once in your app entry (Vite processes it like normal CSS - minify, `?inline`, etc.):
 
 ```ts
 import "zynora/css";
@@ -53,8 +53,8 @@ The plugin reads the generated `zynora.css` from your configured `output` folder
 <i class="zy zyb-picpay" aria-hidden="true"></i>
 ```
 
-- **`zy`** — family class (`baseClass`).
-- **`zys-star` / `zyb-picpay`** — icon id from folder layout and `.zynora.yaml` (see [Icon folders & metadata](./icon-folders.md)).
+- **`zy`** - family class (`baseClass`).
+- **`zys-star` / `zyb-picpay`** - icon id from folder layout and `.zynora.yaml` (see [Icon folders & metadata](./icon-folders.md)).
 
 ### Accessibility
 

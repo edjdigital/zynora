@@ -1,6 +1,6 @@
 # Introduction
 
-**Zynora** is a small toolchain and icon set format for shipping **icon fonts** on the web. You maintain **vector (or PNG) sources** in a predictable folder tree; the **Vite plugin** (or a programmatic API) turns them into **woff2 / woff / ttf**, a **CSS file**, and **JSON / TypeScript** codepoint maps.
+**Zynora** is a small toolchain and icon set format for shipping **icon fonts** on the web. It is **created by the Even7 team**. You maintain **vector (or PNG) sources** in a predictable folder tree; the **Vite plugin** (or a programmatic API) turns them into **woff2 / woff / ttf**, a **CSS file**, and **JSON / TypeScript** codepoint maps.
 
 ## Why a font?
 
