@@ -17,11 +17,12 @@ export type ZynoraPluginOptions = {
 
     /**
      * Output directory for generated fonts and CSS. Defaults to `public/zynora` (relative to Vite `root`).
+     * In `vite build`, `import "zynora/css"` resolves to the generated `.css` file here so font `url(./…)` resolve on disk.
      */
     output?: string;
 
     /**
-     * Public URL prefix for `@font-face` in generated CSS. Inferred when `output` lies under Vite `publicDir`.
+     * Public URL prefix for `@font-face` in the **generated** CSS file. Omit for relative `./` (default from the plugin) so `vite build` resolves font files next to the stylesheet.
      */
     fontsUrl?: string | null;
 
@@ -59,12 +60,13 @@ export type ZynoraPluginOptions = {
      * When `true`, suppress `[zynora]` success logs.
      */
     silent?: boolean;
+
 };
 
 /**
  * Vite plugin for the Zynora icon set.
  *
- * Enables `import "zynora/css"` as a virtual module that exposes the generated icon font stylesheet.
+ * Enables `import "zynora/css"`: virtual stylesheet in dev; in production build, resolves to the generated CSS on disk.
  *
  * @param options - Optional overrides.
  * @returns Vite plugin instance.

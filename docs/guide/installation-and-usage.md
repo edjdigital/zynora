@@ -22,7 +22,9 @@ export default defineConfig({
 | Package icons | `packageIcons: true` - built-in `icons/` from **zynora** |
 | App icons | Optional `input`; merged on top of package icons when both are set |
 | Output | `public/zynora` (relative to Vite `root`) |
-| `fontsUrl` in CSS | Inferred (e.g. `/zynora/`) when `output` lies under Vite’s `publicDir` |
+| `fontsUrl` in generated file | Default: **`./`** (relative to the `.css` file) so `vite build` resolves fonts next to the stylesheet. Set `fontsUrl` only if you need a fixed prefix (e.g. CDN). In dev, the virtual module rewrites URLs for `publicDir` / `/@zynora/*`. |
+| Output **outside** `publicDir` | In dev, the virtual stylesheet may use `/@zynora/*` (middleware). In `vite build`, the real `{output}/{fontName}.css` uses relative `url(./…)` next to the font files. Set `fontsUrl` if you host fonts elsewhere. |
+| `vite build` | `import "zynora/css"` resolves to the generated **`{output}/{fontName}.css` on disk**, so `url(./zynora.woff2)` is resolved next to that file (no virtual CSS, no Rolldown warnings for `url(/zynora/...)`). |
 | Font / file base name | `zynora` |
 | Family CSS class | `zy` |
 
