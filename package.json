@@ -1,0 +1,48 @@
+{
+    "name": "zynora",
+    "version": "1.0.0",
+    "description": "Zynora icon set (folder-based SVG/PNG) with Vite integration and auto-generated docs.",
+    "license": "UNLICENSED",
+    "private": true,
+    "type": "module",
+    "files": [
+        "icons",
+        "lib",
+        "scripts",
+        "vite.d.ts",
+        "css.d.ts"
+    ],
+    "exports": {
+        ".": "./lib/build-icon-font.mjs",
+        "./css": {
+            "types": "./css.d.ts",
+            "import": "./lib/zynora-css-entry.mjs",
+            "default": "./lib/zynora-css-entry.mjs"
+        },
+        "./vite": {
+            "types": "./vite.d.ts",
+            "import": "./lib/vite-plugin-zynora.mjs",
+            "default": "./lib/vite-plugin-zynora.mjs"
+        }
+    },
+    "scripts": {
+        "doc:data": "node ./scripts/generate-icon-data.mjs",
+        "doc:dev": "yarn doc:data && vitepress dev docs",
+        "doc:build": "yarn doc:data && vitepress build docs"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "peerDependencies": {
+        "vite": "^7.0.0 || ^8.0.0"
+    },
+    "dependencies": {
+        "fantasticon": "^3.0.0",
+        "potrace": "^2.1.8",
+        "yaml": "^2.6.0"
+    },
+    "devDependencies": {
+        "fuse.js": "^7.0.0",
+        "vitepress": "^1.6.3"
+    }
+}

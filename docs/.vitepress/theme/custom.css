@@ -1,0 +1,11 @@
+/**
+ * Slight polish for the icon gallery and modal (VitePress default theme variables).
+ */
+:root {
+    --zyn-gallery-gap: 1rem;
+    --zyn-modal-radius: 12px;
+}
+
+html.zyn-modal-open {
+    overflow: hidden;
+}

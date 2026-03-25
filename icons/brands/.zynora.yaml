@@ -1,0 +1,3 @@
+# Style-level defaults for all icons under icons/brands/ (Font Awesome “brands” equivalent)
+classPrefix: zyb
+label: Brands

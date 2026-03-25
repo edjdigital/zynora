@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "jsx": "preserve",
+        "lib": ["ESNext", "DOM"],
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "resolveJsonModule": true,
+        "strict": true,
+        "noEmit": true,
+        "skipLibCheck": true,
+        "types": ["vite/client"]
+    },
+    "include": ["./*.mts", "./theme/**/*.ts", "./theme/**/*.vue", "./data/**/*.json"]
+}
