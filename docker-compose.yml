@@ -1,6 +1,10 @@
 # Zynora — static documentation (VitePress) served by nginx.
 # Dokploy: set the build context to this package folder (zynora) and use this
 # compose file, or use the Dockerfile alone with the same context root.
+#
+# Host port defaults to 18080 to avoid clashing with other stacks on 8080.
+# If you still get "address already in use", set ZYNORA_DOCS_PORT in Dokploy
+# (or your shell) to any free port, e.g. ZYNORA_DOCS_PORT=3080.
 
 services:
     zynora-docs:
@@ -9,5 +13,5 @@ services:
             dockerfile: Dockerfile
         image: zynora-docs:latest
         ports:
-            - "${ZYNORA_DOCS_PORT:-8080}:80"
+            - "${ZYNORA_DOCS_PORT:-18080}:80"
         restart: unless-stopped
