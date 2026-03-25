@@ -1,31 +1,16 @@
-# Zynora - static documentation (VitePress) served by nginx.
-# Dokploy: set the build context to this package folder (zynora) and use this
-# compose file, or use the Dockerfile alone with the same context root.
-#
-# Host port defaults to 18080 to avoid clashing with other stacks on 8080.
-# If you still get "address already in use", set ZYNORA_DOCS_PORT in Dokploy
-# (or your shell) to any free port, e.g. ZYNORA_DOCS_PORT=3080.
-#
-# Optional remote MCP: docker compose --profile mcp up -d zynora-mcp
-
 services:
     zynora-docs:
         build:
             context: .
             dockerfile: Dockerfile
         image: zynora-docs:latest
-        ports:
-            - "${ZYNORA_DOCS_PORT:-18080}:80"
         restart: unless-stopped
 
-    # Optional: remote MCP (Streamable HTTP). Point clients at http://host:3333/mcp
     zynora-mcp:
         build:
             context: .
             dockerfile: mcp/Dockerfile
         image: zynora-mcp:latest
-        ports:
-            - "${ZYNORA_MCP_PORT:-3333}:3333"
         environment:
             ZYNORA_MCP_HOST: 0.0.0.0
             ZYNORA_ICONS_URL: ${ZYNORA_ICONS_URL:-https://zynora.even7.dev/zynora-icons.json}
