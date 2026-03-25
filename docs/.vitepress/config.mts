@@ -4,7 +4,8 @@ export default defineConfig({
     title: "Zynora",
     description: "Folder-based icon font for the web — Vite plugin, SVG/PNG sources, Font Awesome–style classes.",
     lang: "en-US",
-    lastUpdated: true,
+    // VitePress uses `git` for timestamps; Docker/Dokploy often has no git binary or no `.git` in context.
+    lastUpdated: process.env.ZYNORA_DOCS_NO_GIT === "1" ? false : true,
     cleanUrls: true,
 
     themeConfig: {

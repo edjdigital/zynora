@@ -17,6 +17,9 @@ RUN if [ -f yarn.lock ]; then \
 
 COPY . .
 
+# Skip git-based `lastUpdated` (see docs/.vitepress/config.mts)
+ENV ZYNORA_DOCS_NO_GIT=1
+
 RUN yarn doc:build
 
 # Serve static output
