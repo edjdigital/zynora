@@ -1,0 +1,13 @@
+# Zynora — static documentation (VitePress) served by nginx.
+# Dokploy: set the build context to this package folder (zynora) and use this
+# compose file, or use the Dockerfile alone with the same context root.
+
+services:
+    zynora-docs:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: zynora-docs:latest
+        ports:
+            - "${ZYNORA_DOCS_PORT:-8080}:80"
+        restart: unless-stopped
