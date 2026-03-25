@@ -1,0 +1,25 @@
+{
+    "name": "zynora-mcp",
+    "version": "1.0.0",
+    "description": "Model Context Protocol server so assistants can query Zynora icons and usage.",
+    "license": "MIT",
+    "type": "module",
+    "bin": {
+        "zynora-mcp": "./src/index.mjs",
+        "zynora-mcp-http": "./src/http.mjs"
+    },
+    "files": [
+        "src"
+    ],
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "scripts": {
+        "start": "node ./src/index.mjs",
+        "start:http": "node ./src/http.mjs"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.28.0",
+        "zod": "^3.24.0"
+    }
+}

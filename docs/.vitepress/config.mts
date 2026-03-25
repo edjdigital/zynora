@@ -38,6 +38,10 @@ export default defineConfig({
                         {
                             text: "Icon folders & metadata",
                             link: "/guide/icon-folders"
+                        },
+                        {
+                            text: "MCP for AI assistants",
+                            link: "/guide/mcp-for-ai"
                         }
                     ]
                 }

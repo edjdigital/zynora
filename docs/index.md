@@ -17,11 +17,13 @@ hero:
 features:
   - title: Vite-native workflow
     details: The zynora() plugin compiles your icon set into woff2, CSS, JSON, and TypeScript maps under public/ (or a path you choose).
-  - title: Organised like a design system
-    details: Each glyph lives in icons/{style}/{name}/ with optional doc.md for a Font Awesome-style trademark notice on brand marks.
-  - title: Familiar markup
-    details: Use a short family class plus a prefixed icon class, e.g. class="zy zyb-picpay", similar to fa + fa-* patterns.
 
-  - title: Documentation site
-    details: VitePress powers this site - local search across guides, and a gallery with fuzzy search, filters, and a detail view per icon.
+  - title: Organised like a design system
+    details: Each glyph lives in icons/{style}/{name}/ with optional doc.md for trademark notices on brand marks when needed.
+
+  - title: Familiar markup
+    details: Use a base family class with a prefixed icon class on the same element, e.g. class="zy zyb-picpay".
+
+  - title: MCP for assistants
+    details: Stdio or remote Streamable HTTP MCP, plus a public /zynora-icons.json catalog, help agents use Zynora from Cursor and similar clients. See the MCP guide in Getting started.
 ---

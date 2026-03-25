@@ -12,6 +12,7 @@ const PACKAGE_ROOT = path.join(__dirname, "..");
 const ICONS_DIR = path.join(PACKAGE_ROOT, "icons");
 const DATA_DIR = path.join(PACKAGE_ROOT, "docs", ".vitepress", "data");
 const DATA_FILE = path.join(DATA_DIR, "icons.json");
+const PUBLIC_ICONS_FILE = path.join(PACKAGE_ROOT, "docs", "public", "zynora-icons.json");
 
 /**
  * Formats a decimal code point as `U+XXXX` for display.
@@ -102,12 +103,16 @@ async function main() {
     const icons = await collectZynoraIcons(ICONS_DIR);
 
     if (icons.length === 0) {
+        const emptyPayload = {
+            generatedAt: new Date().toISOString(),
+            icons: []
+        };
+        const emptyJson = `${JSON.stringify(emptyPayload, null, 2)}\n`;
+
         await mkdir(DATA_DIR, { recursive: true });
-        await writeFile(
-            DATA_FILE,
-            `${JSON.stringify({ generatedAt: new Date().toISOString(), icons: [] }, null, 2)}\n`,
-            "utf8"
-        );
+        await writeFile(DATA_FILE, emptyJson, "utf8");
+        await mkdir(path.dirname(PUBLIC_ICONS_FILE), { recursive: true });
+        await writeFile(PUBLIC_ICONS_FILE, emptyJson, "utf8");
         console.info(`No icons found; wrote empty ${path.relative(PACKAGE_ROOT, DATA_FILE)}`);
 
         return;
@@ -128,9 +133,14 @@ async function main() {
             icons: iconRecords
         };
 
+        const out = `${JSON.stringify(payload, null, 2)}\n`;
+
         await mkdir(DATA_DIR, { recursive: true });
-        await writeFile(DATA_FILE, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
+        await writeFile(DATA_FILE, out, "utf8");
+        await mkdir(path.dirname(PUBLIC_ICONS_FILE), { recursive: true });
+        await writeFile(PUBLIC_ICONS_FILE, out, "utf8");
         console.info(`Wrote ${iconRecords.length} icon(s) → ${path.relative(PACKAGE_ROOT, DATA_FILE)}`);
+        console.info(`Published MCP/catalog copy → ${path.relative(PACKAGE_ROOT, PUBLIC_ICONS_FILE)}`);
     } finally {
         await rm(tmpOut, {
             recursive: true,
