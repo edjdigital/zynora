@@ -4,7 +4,7 @@
 
 ## How to use it {#how-to-use}
 
-1. **Configure your MCP client** once (stdio or remote URL — see below). The client starts or connects to the Zynora MCP server.
+1. **Configure your MCP client** once (stdio or remote URL - see below). The client starts or connects to the Zynora MCP server.
 2. **Reload / restart** the client if it does not pick up the new server immediately.
 3. **Chat with your assistant** as usual. When it needs Zynora facts, it can call tools such as `zynora_search_icons` or `zynora_get_icon` on its own. You do **not** run those tool names yourself in a terminal.
 4. **Ask in plain language**, for example:
@@ -36,7 +36,7 @@ If the assistant says it has no Zynora tools, the MCP server is not connected - 
 | --- | --- | --- |
 | Quick reference | `zynora://docs/quickstart` | Markdown: Vite setup, HTML classes, folder layout |
 
-## Local (stdio) — full setup {#local-stdio}
+## Local (stdio) - full setup {#local-stdio}
 
 Do this on the **same machine** where your IDE runs (the IDE will spawn `node` for you).
 

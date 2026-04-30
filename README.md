@@ -1,16 +1,16 @@
 # Zynora
 
-**Icon font toolkit for the web** — folder-based SVG/PNG icons, a Vite plugin, generated CSS & font files, and a VitePress doc site with a searchable gallery.
+**Icon font toolkit for the web** - folder-based SVG/PNG icons, a Vite plugin, generated CSS & font files, and a VitePress doc site with a searchable gallery.
 
 By the [Even7](https://even7.com.br) team. **MIT.**
 
 ## Documentation
 
-**[zynora.even7.dev](https://zynora.even7.dev/)** — install, folder layout, gallery, [MCP for assistants](https://zynora.even7.dev/guide/mcp-for-ai).
+**[zynora.even7.dev](https://zynora.even7.dev/)** - install, folder layout, gallery, [MCP for assistants](https://zynora.even7.dev/guide/mcp-for-ai).
 
 ## Quick start
 
-Add **zynora** to your Vite app (workspace link, local path, or your registry — see [Installation & usage](https://zynora.even7.dev/guide/installation-and-usage)).
+Add **zynora** to your Vite app (workspace link, local path, or your registry - see [Installation & usage](https://zynora.even7.dev/guide/installation-and-usage)).
 
 ```ts
 // vite.config.ts
