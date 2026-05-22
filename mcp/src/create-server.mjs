@@ -92,7 +92,7 @@ export function createZynoraMcpServer() {
                     .max(200)
                     .optional()
                     .default(25)
-                    .describe("Maximum number of icons to return (1–200).")
+                    .describe("Maximum number of icons to return (1-200).")
             }),
             annotations: {
                 readOnlyHint: true
