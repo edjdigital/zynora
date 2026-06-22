@@ -10,9 +10,9 @@ RUN corepack enable
 COPY package.json yarn.lock* ./
 
 RUN if [ -f yarn.lock ]; then \
-        yarn install --frozen-lockfile; \
+        yarn install --frozen-lockfile --ignore-scripts; \
     else \
-        yarn install; \
+        yarn install --ignore-scripts; \
     fi
 
 COPY . .

@@ -10,6 +10,8 @@
     "lib",
     "dist",
     "scripts",
+    "src/lemon-plugin",
+    "tsconfig.lemon-plugin.json",
     "vite.d.ts",
     "css.d.ts"
   ],
@@ -33,7 +35,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.lemon-plugin.json",
-    "prepare": "yarn build",
+    "prepare": "node scripts/ensure-built.cjs",
     "doc:data": "node ./scripts/generate-icon-data.mjs",
     "doc:dev": "yarn doc:data && vitepress dev docs",
     "doc:build": "yarn doc:data && vitepress build docs"
