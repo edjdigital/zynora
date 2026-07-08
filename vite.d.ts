@@ -68,7 +68,7 @@ export type ZynoraPluginOptions = {
  *
  * Enables `import "zynora/css"`: virtual stylesheet in dev; in production build, resolves to the generated CSS on disk.
  *
- * @param options - Optional overrides.
+ * @param options Optional overrides.
  * @returns Vite plugin instance.
  */
 export function zynora(options?: ZynoraPluginOptions): Plugin;

@@ -8,7 +8,10 @@
   "files": [
     "icons",
     "lib",
+    "dist",
     "scripts",
+    "src/lemon-plugin",
+    "tsconfig.lemon-plugin.json",
     "vite.d.ts",
     "css.d.ts"
   ],
@@ -23,9 +26,16 @@
       "types": "./vite.d.ts",
       "import": "./lib/vite-plugin-zynora.mjs",
       "default": "./lib/vite-plugin-zynora.mjs"
+    },
+    "./lemon-plugin": {
+      "types": "./dist/lemon-plugin/index.d.ts",
+      "import": "./dist/lemon-plugin/index.js",
+      "default": "./dist/lemon-plugin/index.js"
     }
   },
   "scripts": {
+    "build": "tsc -p tsconfig.lemon-plugin.json",
+    "prepare": "node scripts/ensure-built.cjs",
     "doc:data": "node ./scripts/generate-icon-data.mjs",
     "doc:dev": "yarn doc:data && vitepress dev docs",
     "doc:build": "yarn doc:data && vitepress build docs"
@@ -42,7 +52,9 @@
     "yaml": "^2.6.0"
   },
   "devDependencies": {
+    "@types/node": "^22.15.0",
     "fuse.js": "^7.0.0",
+    "typescript": "^5.9.3",
     "vitepress": "^1.6.3"
   },
   "resolutions": {
